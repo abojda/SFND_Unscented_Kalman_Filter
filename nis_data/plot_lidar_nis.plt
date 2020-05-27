@@ -10,7 +10,7 @@ set style line 2 \
     linetype 1 linewidth 2 \
     pointtype 7 pointsize 0.5
 
-nsi_line = 7.815
+nis_line = 5.991
 
 plot 'nis_log.dat' with linespoints linestyle 1
-replot nsi_line with linespoints linestyle 2
+replot nis_line with linespoints linestyle 2
