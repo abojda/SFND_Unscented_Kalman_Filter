@@ -1,6 +1,7 @@
 #ifndef UKF_H
 #define UKF_H
 
+#include <iostream>
 #include "Eigen/Dense"
 #include "measurement_package.h"
 
@@ -95,6 +96,23 @@ class UKF {
 
   // Sigma point spreading parameter
   double lambda_;
+
+  /**
+   * New fields
+  */ 
+
+  // Radar measurement noise matrix
+  Eigen::MatrixXd R_radar_;
+
+  // Lidar measurement noise matrix
+  Eigen::MatrixXd R_lidar_;
+
+  // Normalized Innovation Squared
+  double NIS_lidar_;
+  double NIS_radar_;
+
+  bool print_NIS_lidar_;
+  bool print_NIS_radar_;
 };
 
 #endif  // UKF_H
